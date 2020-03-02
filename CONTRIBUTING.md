@@ -19,7 +19,7 @@ Providing the following information will increase the chances of your issue bein
 * **Related Issues** - has a similar issue been reported before?
 * **Suggest a Fix** - if you can't fix the bug yourself, perhaps you can point to what might be wrong.
 
-You can file new issues by providing the above information [here](https://github.com/SchweizerischeBundesbahnen/api-principles/issues/new).
+You can file new issues by providing the above information [here](https://github.com/schweizerischebundesbahnen/api-principles/issues/new).
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 Before you submit your Pull Request (PR) consider the following guidelines:

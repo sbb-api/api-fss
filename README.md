@@ -1,6 +1,6 @@
 This is a template for public facing Documentation of SBB-APIs, as part of the company wide *Integration Architecture* initiative. 
 
-*See it in action:* https://SchweizerischeBundesbahnen.github.io/api-provider-documentation-template/
+*See it in action:* https://schweizerischebundesbahnen.github.io/api-provider-documentation-template/
 
 ## Repository Structure
 
