@@ -12,8 +12,11 @@ Other page
 This is an other page with subpages.
 
 # Download
+
 [Download docx](https://raw.githubusercontent.com/schweizerischebundesbahnen/api-provider-documentation-template/master/content/content.docx){: .btn }
 
 [Download pdf](https://raw.githubusercontent.com/schweizerischebundesbahnen/api-provider-documentation-template/master/content/content.pdf){: .btn }
+
+# Contact
 
 [Contact us](mailto:noreply@sbb.ch){: .btn }
