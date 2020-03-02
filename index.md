@@ -13,5 +13,5 @@ This template uses just-the-docs. Further Information: https://pmarsceill.github
 
 Chapters
 ========
-[Other Page](other.md)
+[Other Page](other)
 
