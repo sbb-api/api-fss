@@ -1,7 +1,7 @@
 This is the repository of the public documentation of the SBB Financial Systems and Services (FSS) API.
 
 # Repository Structure
-Describes the content of this repo.
+Describes the content of this repository.
 
 ## Documentation
 The [/](/) folder contains all the markdown files which are rendered with [jekyll](https://jekyllrb.com). 
