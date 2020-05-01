@@ -1,13 +1,13 @@
 remote_theme: pmarsceill/just-the-docs
 
-title: API Provider Documentation Template
-description: Template for documentation of SBB APIs
-baseurl: "/api-provider-documentation-template"
+title: SBB API FSS
+description: SBB API Financial Systems & Services
+baseurl: "/api-fss"
 url: "https://sbb-api.github.io"
 
 permalink: pretty
 search_enabled: true
 heading_anchors: true
 aux_links:
-    " API Provider Documentation Template on GitHub":
-      - "//github.com/sbb-api/api-provider-documentation-template"
+    " API API FSS on GitHub":
+      - "//github.com/sbb-api/api-fss"
