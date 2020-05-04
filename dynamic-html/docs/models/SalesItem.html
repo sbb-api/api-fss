@@ -1,0 +1,62 @@
+
+<h2>SalesItem</h2>
+<ul class="parameter">
+  <li class="param-required-true">transactionTime : transactionTime
+    <br/>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">Price : Price
+    <br/>This is the final price amount including VAT (less dectuctible if appliable in case of refund) - Minus amounts are not allowed, this is managed by the transactionType. If the Product has to be priced in SAP Brim, the field Price should contain Zero (0.00) and priceCalculationInformation has to be delivered.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">vat : vat
+    <br/>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">bookingSystem : String
+    <br/>The system used by the saleschannel to purchase the product for the customer. Usually its similar to the supplier but it can differ for plattforms which connect different suppliers.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">supplier : String
+    <br/>Supplier who&#39;s providing the product for the customer and who will get the money for this purchase.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">customerID : String
+    <br/>This is an optional field for a customerID in the suppliers bookingsystem - if needed
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">productNumberSBB : String
+    <br/>Number of the product in the article master of the distributionchannel
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">productDescriptionSBB : String
+    <br/>Name of the product in the article master of the distributionchannel
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">productNumberSupplier : String
+    <br/>Number of the product in suppliers bookingsystem
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">orderId : String
+    <br/>ID for the whole order in suppliers bookingsystem - if not available repeat the supplierSalesReferenceNr
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">referenceNr : String
+    <br/>ID for a purchase in suppliers bookingsystem.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">CommissionRule : CommissionRule
+    <br/>
+  </li>
+</ul>

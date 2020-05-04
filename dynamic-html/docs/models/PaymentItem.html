@@ -1,0 +1,61 @@
+
+<h2>PaymentItem</h2>
+<ul class="parameter">
+  <li class="param-required-true">paymentId : BigDecimal
+    <br/>This is an unique ID for each payment made in the distributionchannels
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">transactionType : String
+    <br/>Type of payment transaction - PAYMENT, REFUND or CANCEL. This attribute is managing the minus/plus sign for the price in PaymentItem. REFUND or CANCEL result in minus.
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>PAYMENT</dd>
+            <dd>REFUND</dd>
+            <dd>CANCEL</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">transactionStatus : String
+    <br/>The final Status of the payment transaction. Successfull payment &#x3D; settled, Final not succesfull even after retry &#x3D; failed, Final after status failed &#x3D; settled_late
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>settled</dd>
+            <dd>failed</dd>
+            <dd>settled_late</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">paymentMethod : String
+    <br/>Paymenttype code with max 3 characters - similar to the SBB terminology in ZVS Payment. For the invoicing &#39;FSI&#39; has to be used, InvoiceInformations have to be delivered and Customers master data has to be managed in SAP Brim. Valid values: VIS &#x3D; VISA , MC &#x3D; Mastercard, DIN &#x3D; Diners, AMX &#x3D; American Express, JCB &#x3D; JCB International, UAP &#x3D; Airplus, PCD &#x3D; Postfinance Card, RCC &#x3D; Reka Check Card, MAE &#x3D; Maestro, TWI &#x3D; TWINT, BYU &#x3D; Byjuno, PRO &#x3D; Promotion, BAR &#x3D; Cash, FSI &#x3D; Invoice in SAP Brim
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">transactionTime : transactionTime
+    <br/>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">Price : Price
+    <br/>This is the payment amount credit/debited to the customer for this paymentType - Minus amounts are not allowed, this is managed by the transactionType
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">OnlineReference : OnlineReference
+    <br/>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">TerminalReference : TerminalReference
+    <br/>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">CouponReference : CouponReference
+    <br/>
+  </li>
+</ul>

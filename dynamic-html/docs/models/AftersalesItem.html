@@ -1,0 +1,47 @@
+
+<h2>AftersalesItem</h2>
+<ul class="parameter">
+  <li class="param-required-true">transactionTime : transactionTime
+    <br/>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">Price : Price
+    <br/>This is the final price amount including VAT (less dectuctible if appliable in case of refund) - Minus amounts are not allowed, this is managed by the transactionType. If the Product has to be priced in SAP Brim, the field Price should contain Zero (0.00) and priceCalculationInformation has to be delivered.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">vat : vat
+    <br/>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">supplier : String
+    <br/>Supplier who&#39;s providing the product for the customer and who will get the money for this purchase.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">productNumberSupplier : String
+    <br/>Number of the product in suppliers bookingsystem
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">referenceNr : String
+    <br/>ID for an aftersale in suppliers bookingsystem - if available. If not deliver the original reference instead.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">customerDetuctible : BigDecimal
+    <br/>If a detuctible is calculated in case of refund, the Price/Amount should be calculated less detuctible
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">reason : String
+    <br/>Reason for the aftersale - if available.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">CommissionRule : CommissionRule
+    <br/>
+  </li>
+</ul>
