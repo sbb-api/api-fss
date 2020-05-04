@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FSS Financial Services</title>
+    <style type="text/css">
+      body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 15px;
+	color: #444;
+	margin-right: 24px;
+}
+
+h1	{
+	font-size: 25px;
+}
+h2	{
+	font-size: 20px;
+}
+h3	{
+	font-size: 16px;
+	font-weight: bold;
+}
+hr	{
+	height: 1px;
+	border: 0;
+	color: #ddd;
+	background-color: #ddd;
+}
+
+.app-desc {
+  clear: both;
+  margin-left: 20px;
+}
+.param-name {
+  width: 100%;
+}
+.license-info {
+  margin-left: 20px;
+}
+
+.license-url {
+  margin-left: 20px;
+}
+
+.model {
+  margin: 0 0 0px 20px;
+}
+
+.method {
+  margin-left: 20px;
+}
+
+.method-notes	{
+	margin: 10px 0 20px 0;
+	font-size: 90%;
+	color: #555;
+}
+
+pre {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.http-method {
+ text-transform: uppercase;
+}
+
+pre.get {
+  background-color: #0f6ab4;
+}
+
+pre.post {
+  background-color: #10a54a;
+}
+
+pre.put {
+  background-color: #c5862b;
+}
+
+pre.delete {
+  background-color: #a41e22;
+}
+
+.huge	{
+	color: #fff;
+}
+
+pre.example {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+code {
+  white-space: pre;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.method-path {
+  font-size: 1.5em;
+  background-color: #0f6ab4;
+}
+
+.up {
+  float:right;
+}
+
+.parameter {
+  width: 500px;
+}
+
+.param {
+  width: 500px;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+.param-desc {
+  width: 700px;
+  padding: 0 0 0 20px;
+  color: #777;
+}
+
+.param-type {
+  font-style: italic;
+}
+
+.param-enum-header {
+width: 700px;
+padding: 0 0 0 60px;
+color: #777;
+font-weight: bold;
+}
+
+.param-enum {
+width: 700px;
+padding: 0 0 0 80px;
+color: #777;
+font-style: italic;
+}
+
+.field-label {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.field-items	{
+	padding: 0 0 15px 0;
+	margin-bottom: 15px;
+}
+
+.return-type {
+  clear: both;
+  padding-bottom: 10px;
+}
+
+.param-header {
+  font-weight: bold;
+}
+
+.method-tags {
+  text-align: right;
+}
+
+.method-tag {
+  background: none repeat scroll 0% 0% #24A600;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <h1>FSS Financial Services</h1>
+    <div class="app-desc">This service allows to submit payments, purchases and sales Items to SBBs financial system FSS based on SAP Hybris Billing. Depending on the agreed functionalities the Items can be priced, validated, enriched, posted in the subledger and reported. For more information please check the FSS website or contact the team.</div>
+    <div class="app-desc">More information: <a href="https://confluence.sbb.ch/pages/viewpage.action?pageId=850440892">https://confluence.sbb.ch/pages/viewpage.action?pageId=850440892</a></div>
+    <div class="app-desc">Contact Info: <a href="dl_fss_all@sbb.ch">dl_fss_all@sbb.ch</a></div>
+    <div class="app-desc">Version: 1.0.1</div>
+    <div class="app-desc">BasePath:/</div>
+    <div class="license-info">SBB</div>
+    <div class="license-url">file:~/LICENSE.txt</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#AftersalesDocument">AftersalesDocument</a></h4>
+  <ul>
+  <li><a href="#v1AfterSalesDocumentsPost"><code><span class="http-method">post</span> /v1/AfterSalesDocuments</code></a></li>
+  </ul>
+  <h4><a href="#PaymentDocument">PaymentDocument</a></h4>
+  <ul>
+  <li><a href="#v1PaymentDocumentsPost"><code><span class="http-method">post</span> /v1/PaymentDocuments</code></a></li>
+  </ul>
+  <h4><a href="#SalesDocument">SalesDocument</a></h4>
+  <ul>
+  <li><a href="#v1SalesDocumentsPost"><code><span class="http-method">post</span> /v1/SalesDocuments</code></a></li>
+  </ul>
+
+  <h1><a name="AftersalesDocument">AftersalesDocument</a></h1>
+  <div class="method"><a name="v1AfterSalesDocumentsPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /v1/AfterSalesDocuments</code></pre></div>
+    <div class="method-summary">The service submits aftersales Documents (refund, cancelation) to SBBs financial System FSS based on SAP Brim. (<span class="nickname">v1AfterSalesDocumentsPost</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">AfterSalesDocuments <a href="#AfterSalesDocuments">AfterSalesDocuments</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; aftersalesItems includes the aftersale of 1 to n product/s in one business case with a customer. Attention: if one Product with amount &gt;1 is refunded for each single unit a new Item is needed. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>*/*</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Item(s) successfully created in FSS SAP Brim
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Bad request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal server error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="PaymentDocument">PaymentDocument</a></h1>
+  <div class="method"><a name="v1PaymentDocumentsPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /v1/PaymentDocuments</code></pre></div>
+    <div class="method-summary">The service submits payments Documents to SBBs financial System FSS based on SAP Brim. (<span class="nickname">v1PaymentDocumentsPost</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">PaymentDocuments <a href="#PaymentDocuments">PaymentDocuments</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; PaymentItems includes 1 full payment/refund or up to n partial payments for one business case with a customer </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>*/*</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Item(s) successfully created in FSS SAP Brim
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Bad request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal server error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="SalesDocument">SalesDocument</a></h1>
+  <div class="method"><a name="v1SalesDocumentsPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /v1/SalesDocuments</code></pre></div>
+    <div class="method-summary">The service submits sales Documents to SBBs financial System FSS based on SAP Brim. (<span class="nickname">v1SalesDocumentsPost</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">SalesDocuments <a href="#SalesDocuments">SalesDocuments</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; salesItems includes the sale/aftersale of 1 to n product/s in one business case with a customer. Attention: if one Product with amount &gt;1 is sold for each single unit a new Item is needed. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>*/*</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Item(s) successfully created in FSS SAP Brim
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Bad request
+        <a href="#"></a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+    <h4 class="field-label">500</h4>
+    Internal server error
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#AfterSalesDocument"><code>AfterSalesDocument</code> - </a></li>
+    <li><a href="#AfterSalesDocuments"><code>AfterSalesDocuments</code> - </a></li>
+    <li><a href="#AftersalesItem"><code>AftersalesItem</code> - </a></li>
+    <li><a href="#CommissionRule"><code>CommissionRule</code> - </a></li>
+    <li><a href="#CouponReference"><code>CouponReference</code> - </a></li>
+    <li><a href="#OnlineReference"><code>OnlineReference</code> - </a></li>
+    <li><a href="#PaymentDocument"><code>PaymentDocument</code> - </a></li>
+    <li><a href="#PaymentDocuments"><code>PaymentDocuments</code> - </a></li>
+    <li><a href="#PaymentItem"><code>PaymentItem</code> - </a></li>
+    <li><a href="#Price"><code>Price</code> - </a></li>
+    <li><a href="#SalesDocument"><code>SalesDocument</code> - </a></li>
+    <li><a href="#SalesDocuments"><code>SalesDocuments</code> - </a></li>
+    <li><a href="#SalesItem"><code>SalesItem</code> - </a></li>
+    <li><a href="#SalesPoint"><code>SalesPoint</code> - </a></li>
+    <li><a href="#TechnicalInformation"><code>TechnicalInformation</code> - </a></li>
+    <li><a href="#TerminalReference"><code>TerminalReference</code> - </a></li>
+    <li><a href="#transactionTime"><code>transactionTime</code> - </a></li>
+    <li><a href="#vat"><code>vat</code> - </a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="AfterSalesDocument"><code>AfterSalesDocument</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">businessCaseId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> UUID generated by sales channel - this Id connects all corrsponding sales and payments in one business case with a customer </div>
+          <div class="param-desc"><span class="param-type">example: 550e8400-e29b-11d4-a716-446655440000</span></div>
+<div class="param">TechnicalInformation </div><div class="param-desc"><span class="param-type"><a href="#TechnicalInformation">TechnicalInformation</a></span>  </div>
+<div class="param">SalesPoint </div><div class="param-desc"><span class="param-type"><a href="#SalesPoint">SalesPoint</a></span>  </div>
+<div class="param">AftersalesItems </div><div class="param-desc"><span class="param-type"><a href="#AftersalesItem">array[AftersalesItem]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="AfterSalesDocuments"><code>AfterSalesDocuments</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">AfterSalesDocument </div><div class="param-desc"><span class="param-type"><a href="#AfterSalesDocument">array[AfterSalesDocument]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="AftersalesItem"><code>AftersalesItem</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">transactionTime </div><div class="param-desc"><span class="param-type"><a href="#transactionTime">transactionTime</a></span>  </div>
+<div class="param">Price </div><div class="param-desc"><span class="param-type"><a href="#Price">Price</a></span> This is the final price amount including VAT (less dectuctible if appliable in case of refund) - Minus amounts are not allowed, this is managed by the transactionType. If the Product has to be priced in SAP Brim, the field Price should contain Zero (0.00) and priceCalculationInformation has to be delivered. </div>
+<div class="param">vat </div><div class="param-desc"><span class="param-type"><a href="#vat">vat</a></span>  </div>
+<div class="param">supplier </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Supplier who's providing the product for the customer and who will get the money for this purchase. </div>
+          <div class="param-desc"><span class="param-type">example: NOVA</span></div>
+<div class="param">productNumberSupplier (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Number of the product in suppliers bookingsystem </div>
+          <div class="param-desc"><span class="param-type">example: 125</span></div>
+<div class="param">referenceNr </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> ID for an aftersale in suppliers bookingsystem - if available. If not deliver the original reference instead. </div>
+          <div class="param-desc"><span class="param-type">example: 124124124</span></div>
+<div class="param">customerDetuctible (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> If a detuctible is calculated in case of refund, the Price/Amount should be calculated less detuctible </div>
+          <div class="param-desc"><span class="param-type">example: 5.0</span></div>
+<div class="param">reason (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Reason for the aftersale - if available. </div>
+          <div class="param-desc"><span class="param-type">example: Not used</span></div>
+<div class="param">CommissionRule (optional)</div><div class="param-desc"><span class="param-type"><a href="#CommissionRule">CommissionRule</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CommissionRule"><code>CommissionRule</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>If you are entitled to a commission for selling the supliers product, the commission has to be specified here according to the suppliers contract.</div>
+    <div class="field-items">
+      <div class="param">rate (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> This is the commission rate in favor of the sales agent. This share of the sales Items price amount is retained by the agent. </div>
+          <div class="param-desc"><span class="param-type">example: 5%</span></div>
+<div class="param">amount (optional)</div><div class="param-desc"><span class="param-type"><a href="#double">Double</a></span> This is the commission amount in favor of the sales agent. This share of the sales Items price amount is retained by the agent. If the commission amount is not delivered, it's calculated by SAP Brim based on Price Amount x commissionRate format: double</div>
+          <div class="param-desc"><span class="param-type">example: 10.0</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CouponReference"><code>CouponReference</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">couponId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This is the Id of the used promotion/campagne in the leading coupon-system of the SBB - today: Payseriennummer </div>
+          <div class="param-desc"><span class="param-type">example: 141244444</span></div>
+<div class="param">couponCode (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This is the Promotion Code entered by the customer or printed on the coupon </div>
+          <div class="param-desc"><span class="param-type">example: Promo123</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="OnlineReference"><code>OnlineReference</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">uppTransactionId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> upp Transaction Id returned by PSP DataTrans </div>
+          <div class="param-desc"><span class="param-type">example: 13241234123412342</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PaymentDocument"><code>PaymentDocument</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">businessCaseId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> UUID generated by sales channel - this Id connects all corrsponding sales and payments in one business case with a customer </div>
+          <div class="param-desc"><span class="param-type">example: 550e8400-e29b-11d4-a716-446655440000</span></div>
+<div class="param">TechnicalInformation </div><div class="param-desc"><span class="param-type"><a href="#TechnicalInformation">TechnicalInformation</a></span>  </div>
+<div class="param">SalesPoint </div><div class="param-desc"><span class="param-type"><a href="#SalesPoint">SalesPoint</a></span>  </div>
+<div class="param">PaymentItems </div><div class="param-desc"><span class="param-type"><a href="#PaymentItem">array[PaymentItem]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PaymentDocuments"><code>PaymentDocuments</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">PaymentDocument </div><div class="param-desc"><span class="param-type"><a href="#PaymentDocument">array[PaymentDocument]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PaymentItem"><code>PaymentItem</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">paymentId </div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> This is an unique ID for each payment made in the distributionchannels </div>
+          <div class="param-desc"><span class="param-type">example: 1.0</span></div>
+<div class="param">transactionType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Type of payment transaction - PAYMENT, REFUND or CANCEL. This attribute is managing the minus/plus sign for the price in PaymentItem. REFUND or CANCEL result in minus. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">PAYMENT</div><div class="param-enum">REFUND</div><div class="param-enum">CANCEL</div>
+          <div class="param-desc"><span class="param-type">example: PAYMENT</span></div>
+<div class="param">transactionStatus </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The final Status of the payment transaction. Successfull payment = settled, Final not succesfull even after retry = failed, Final after status failed = settled_late </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">settled</div><div class="param-enum">failed</div><div class="param-enum">settled_late</div>
+          <div class="param-desc"><span class="param-type">example: Completed</span></div>
+<div class="param">paymentMethod </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Paymenttype code with max 3 characters - similar to the SBB terminology in ZVS Payment. For the invoicing 'FSI' has to be used, InvoiceInformations have to be delivered and Customers master data has to be managed in SAP Brim. Valid values: VIS = VISA , MC = Mastercard, DIN = Diners, AMX = American Express, JCB = JCB International, UAP = Airplus, PCD = Postfinance Card, RCC = Reka Check Card, MAE = Maestro, TWI = TWINT, BYU = Byjuno, PRO = Promotion, BAR = Cash, FSI = Invoice in SAP Brim </div>
+          <div class="param-desc"><span class="param-type">example: VIS</span></div>
+<div class="param">transactionTime </div><div class="param-desc"><span class="param-type"><a href="#transactionTime">transactionTime</a></span>  </div>
+<div class="param">Price </div><div class="param-desc"><span class="param-type"><a href="#Price">Price</a></span> This is the payment amount credit/debited to the customer for this paymentType - Minus amounts are not allowed, this is managed by the transactionType </div>
+<div class="param">OnlineReference (optional)</div><div class="param-desc"><span class="param-type"><a href="#OnlineReference">OnlineReference</a></span>  </div>
+<div class="param">TerminalReference (optional)</div><div class="param-desc"><span class="param-type"><a href="#TerminalReference">TerminalReference</a></span>  </div>
+<div class="param">CouponReference (optional)</div><div class="param-desc"><span class="param-type"><a href="#CouponReference">CouponReference</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Price"><code>Price</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">amount </div><div class="param-desc"><span class="param-type"><a href="#double">Double</a></span>  format: double</div>
+          <div class="param-desc"><span class="param-type">example: 42.0</span></div>
+<div class="param">currency </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">CHF</div>
+          <div class="param-desc"><span class="param-type">example: CHF</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SalesDocument"><code>SalesDocument</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">businessCaseId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> UUID generated by sales channel - this Id connects all corrsponding sales and payments in one business case with a customer </div>
+          <div class="param-desc"><span class="param-type">example: 550e8400-e29b-11d4-a716-446655440000</span></div>
+<div class="param">TechnicalInformation </div><div class="param-desc"><span class="param-type"><a href="#TechnicalInformation">TechnicalInformation</a></span>  </div>
+<div class="param">SalesPoint </div><div class="param-desc"><span class="param-type"><a href="#SalesPoint">SalesPoint</a></span>  </div>
+<div class="param">SalesItems </div><div class="param-desc"><span class="param-type"><a href="#SalesItem">array[SalesItem]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SalesDocuments"><code>SalesDocuments</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">SalesDocument </div><div class="param-desc"><span class="param-type"><a href="#SalesDocument">array[SalesDocument]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SalesItem"><code>SalesItem</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">transactionTime </div><div class="param-desc"><span class="param-type"><a href="#transactionTime">transactionTime</a></span>  </div>
+<div class="param">Price </div><div class="param-desc"><span class="param-type"><a href="#Price">Price</a></span> This is the final price amount including VAT (less dectuctible if appliable in case of refund) - Minus amounts are not allowed, this is managed by the transactionType. If the Product has to be priced in SAP Brim, the field Price should contain Zero (0.00) and priceCalculationInformation has to be delivered. </div>
+<div class="param">vat </div><div class="param-desc"><span class="param-type"><a href="#vat">vat</a></span>  </div>
+<div class="param">bookingSystem </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The system used by the saleschannel to purchase the product for the customer. Usually its similar to the supplier but it can differ for plattforms which connect different suppliers. </div>
+          <div class="param-desc"><span class="param-type">example: FAIRTIQ</span></div>
+<div class="param">supplier </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Supplier who's providing the product for the customer and who will get the money for this purchase. </div>
+          <div class="param-desc"><span class="param-type">example: NOVA</span></div>
+<div class="param">customerID (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This is an optional field for a customerID in the suppliers bookingsystem - if needed </div>
+          <div class="param-desc"><span class="param-type">example: D213123</span></div>
+<div class="param">productNumberSBB (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Number of the product in the article master of the distributionchannel </div>
+          <div class="param-desc"><span class="param-type">example: 125</span></div>
+<div class="param">productDescriptionSBB (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Name of the product in the article master of the distributionchannel </div>
+          <div class="param-desc"><span class="param-type">example: Streckenbillett</span></div>
+<div class="param">productNumberSupplier </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Number of the product in suppliers bookingsystem </div>
+          <div class="param-desc"><span class="param-type">example: 125</span></div>
+<div class="param">orderId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> ID for the whole order in suppliers bookingsystem - if not available repeat the supplierSalesReferenceNr </div>
+          <div class="param-desc"><span class="param-type">example: O124124</span></div>
+<div class="param">referenceNr </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> ID for a purchase in suppliers bookingsystem. </div>
+          <div class="param-desc"><span class="param-type">example: 124124124</span></div>
+<div class="param">CommissionRule (optional)</div><div class="param-desc"><span class="param-type"><a href="#CommissionRule">CommissionRule</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SalesPoint"><code>SalesPoint</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">companyCode </div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 11.0</span></div>
+<div class="param">channelNumber </div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> According to the logic in ZVS each distributionChannel has to have a identification number </div>
+          <div class="param-desc"><span class="param-type">example: 46.0</span></div>
+<div class="param">idWithControlNumber </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 033331</span></div>
+<div class="param">idWithoutControlNumber </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 03333</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="TechnicalInformation"><code>TechnicalInformation</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">version </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 0.0.1</span></div>
+<div class="param">testMode </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> This variable has to be true for all testcases </div>
+          <div class="param-desc"><span class="param-type">example: true</span></div>
+<div class="param">environment </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: TEST</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="TerminalReference"><code>TerminalReference</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">terminalId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> id of the ep2 terminal </div>
+          <div class="param-desc"><span class="param-type">example: 1859333</span></div>
+<div class="param">terminalSequenceCounter </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Sequence Counter of the payment on the ep2 terminal </div>
+          <div class="param-desc"><span class="param-type">example: 38214</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="transactionTime"><code>transactionTime</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="vat"><code>vat</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">percentage </div><div class="param-desc"><span class="param-type"><a href="#double">Double</a></span>  format: double</div>
+          <div class="param-desc"><span class="param-type">example: 7.7</span></div>
+<div class="param">basisAmount </div><div class="param-desc"><span class="param-type"><a href="#double">Double</a></span> This is the gross amount including VAT format: double</div>
+          <div class="param-desc"><span class="param-type">example: 39.0</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>
