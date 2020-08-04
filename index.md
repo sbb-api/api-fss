@@ -24,4 +24,4 @@ The API provides a standardised and quickly usable access for booking sales tran
 ---
 
 ## Contact
-For questions and feedback please contact [xxxyyyzzz@sbb.ch](mailto:xxxyyyzzz@sbb.ch).
+For questions and feedback please contact [dlfssru@sbb.ch](mailto:dlfssru@sbb.ch).
